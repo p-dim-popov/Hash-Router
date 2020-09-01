@@ -166,7 +166,7 @@ export const Router = {
     /* List of route object */
     routes: [],
     __bindHashChange: function () {
-        window.onhashchange = function () { Router.__listener(location.hash) }
+        window.onhashchange = function () { Router.__listener(location.hash || "#/") }
     },
     __cleanHash: function (hash) {
         var result = {};
